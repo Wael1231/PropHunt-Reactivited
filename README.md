@@ -5,6 +5,8 @@
 ```Compatible with 2022.10.25s ```
 # Prop Hunt
 
+# Soon for 2023.3.28
+
 A mod for [Among Us](https://store.steampowered.com/app/945360/Among_Us/) which adds a completely new gamemode, Prop Hunt!
 
 
@@ -31,14 +33,18 @@ Prop Hunt replaces the default roles in the game with two new roles, the **Seeke
 | Infection Mode | Whether Props become Seekers when they are killed | True |
 
 ## Installation
-Download the zip from the [latest release](https://github.com/ugackMiner53/PropHunt/releases), and extract the contents into your Among Us game folder.
+Download the zip from the [latest release](https://github.com/Wael1231/PropHunt-Reactivited/releases), and extract the contents into your Among Us game folder.
 
-Although the mod *may* work on official servers, it is highly discouraged to do so, and will likely get you banned. Instead, try to setup your own modded server using [Impostor](https://github.com/Impostor/Impostor), [Hindenburg](https://github.com/SkeldJS/Hindenburg) or another Reactor compatible server.
+Although the mod *may* work on official servers, it is highly discouraged to do so, and will likely get you banned. Instead, try to setup your own modded server using [Impostor](https://github.com/Impostor/Impostor) or another Reactor compatible server.
 
 ## Compatability
 Prop Hunt is fully compatible with [Submerged](https://github.com/SubmergedAmongUs/Submerged)!
 
+# Note : Submerged didn't release version for 2023.3.28 so waiting...
+
 However, Prop Hunt will **not** work with many other mods, such as role mods and any other mod which modifies the gameplay loop.
 
+Maybe Working for support TownOfModrole mod (Mod came in future);
+
 ## Contributing
-Contributions are welcome! Submit a [pull request](https://github.com/ugackMiner53/PropHunt/pulls) and give a brief description and the code will be reviewed as soon as possible.
+Contributions are welcome! Submit a [pull request](https://github.com/Wael1231/PropHunt-Reactivited/pulls) and give a brief description and the code will be reviewed as soon as possible.
