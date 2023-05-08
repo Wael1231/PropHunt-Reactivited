@@ -1,5 +1,10 @@
-﻿using HarmonyLib;
+﻿using System.Collections.Generic;
+using System.Reflection;
+using AmongUs.GameOptions;
+using HarmonyLib;
+using Reactor.Utilities.Extensions;
 using UnityEngine;
+using static PropHunt.PropHuntPlugin;
 
 namespace PropHunt
 {
@@ -48,7 +53,7 @@ namespace PropHunt
             hidingOption.Value = PropHuntPlugin.hidingTime;
             hidingOption.transform.position = new Vector3(hidingOption.transform.position.x, hidingOption.transform.position.y - 0.5f, hidingOption.transform.position.z);
             hidingOption.TitleText.text = "Hiding Time";
-            // Max Miss Option
+            // Max Miss Option 
             maxMissOption = GameObject.Instantiate(numberOption, __instance.AdvancedRolesSettings.transform).GetComponent<NumberOption>();
             maxMissOption.gameObject.SetActive(true);
             maxMissOption.Title = StringNames.NoneLabel;
@@ -69,14 +74,13 @@ namespace PropHunt
         }
 
 
-        [HarmonyPatch(typeof(GameOptionsData), nameof(GameOptionsData.ToHudString))]
-        [HarmonyPrefix]
-        public static void SyncCustomSettings(GameOptionsData __instance)
-        {
+        [HarmonyPatch(typeof(IGameOptionsExtensions), nameof(IGameOptionsExtensions.ToHudString))]
+           public static void Postfix()
+        {    
             if (hidingOption && maxMissOption && infectionOption)
             {
                 PropHuntPlugin.RPCHandler.RPCSettingSync(PlayerControl.LocalPlayer, hidingOption.GetFloat(), maxMissOption.GetInt(), infectionOption.GetBool());
             }
         }
+        }
     }
-}

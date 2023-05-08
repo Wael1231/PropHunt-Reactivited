@@ -12,22 +12,29 @@ using UnityEngine;
 
 namespace PropHunt;
 
-
-[BepInPlugin("com.ugackminer.amongus.prophunt", "Prop Hunt", "v2022.11.5")]
+[BepInPlugin("com.Wael1231.PropHuntReactivited", "Prop Hunt", VersionString)]
 [BepInProcess("Among Us.exe")]
 [BepInDependency(ReactorPlugin.Id)]
+
 public partial class PropHuntPlugin : BasePlugin
 {
     // Backend Variables
-    public Harmony Harmony { get; } = new("com.ugackminer.amongus.prophunt");
+    public Harmony Harmony { get; } = new("com.Wael1231.PropHuntReactivited");
+
+    public const string VersionString = "1.0.0";
+
     public ConfigEntry<float> HidingTime { get; private set; }
-    public ConfigEntry<int> MaxMissedKills { get; private set; }
+    public  ConfigEntry<int> MaxMissedKills { get; private set; }
     public ConfigEntry<bool> Infection { get; private set; }
 
     // Gameplay Variables
     public static float hidingTime = 30f;
     public static int maxMissedKills = 3;
     public static bool infection = true;
+
+    // ShipStatus Require Patch
+        
+     public static ShipStatus shipStatus;
 
     public static int missedKills = 0;
 
