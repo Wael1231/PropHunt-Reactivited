@@ -40,8 +40,7 @@ Although the mod *may* work on official servers, it is highly discouraged to do 
 ## Compatability
 Prop Hunt is fully compatible with [Submerged](https://github.com/SubmergedAmongUs/Submerged)!
 
-# Note : Submerged didn't release version for 2023.3.28 so waiting...
-
+# Note : Submerged Soon will release an update next week for Among us 2023.6.13
 However, Prop Hunt will **not** work with many other mods, such as role mods and any other mod which modifies the gameplay loop.
 
 Maybe Working for support TownOfModrole mod (Mod came in future);
